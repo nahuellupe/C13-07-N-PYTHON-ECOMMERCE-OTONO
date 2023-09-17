@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+    <title>otoño ecommerce website</title>
+</head>
+
+<body>
+    <nav class="index-navigation-container">
+        {% include "components/navigation-bar.html" %}
+    </nav>
+
+    <section class="index-cover-image-container">
+        {% include "components/cover-image.html" %}
+    </section>
+
+    <article class="index-article-container">
+        {% if show_home %}
+        {% include "pages/home.html" %}
+        {% endif %}
+        {% if show_orders %}
+        {% include "pages/orders.html" %}
+        {% endif %}
+        {% if show_login %}
+        {% include "pages/login.html" %}
+        {% endif %}
+    </article>
+
+
+
+    <footer class="index-footer-container">
+        {% include "components/footer.html" %}
+    </footer>
+</body>
+
+</html>

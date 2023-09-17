@@ -1,26 +1,25 @@
 from django.shortcuts import render, redirect
 from .models import Product
+from django.contrib.auth.views import LoginView
+from django.contrib.auth.decorators import login_required
 
-def home(request):
+
+def index_view(request):
+    return render(request, "index.html")
+
+
+def home_view(request):
     products = Product.objects.all()
-    return render(request, "pages/home.html", {"products": products})
+    return render(request, "pages/home.html")
 
 
-def categories(request):
-    # Obtener todas las categorías disponibles
-    categories = Product.objects.values("category").distinct()
+def orders_view(request):
+    return render(request, "pages/orders.html")
 
-    # Obtener la categoría seleccionada (si se ha enviado en el formulario)
-    selected_category = request.GET.get("category")
 
-    # Filtrar los productos según la categoría seleccionada
-    if selected_category:
-        products = Product.objects.filter(category=selected_category)
-    else:
-        products = Product.objects.all()
+def login_view(request):
+    return render(request, "pages/login.html")
 
-    return render(
-        request,
-        "pages/categories.html",
-        {"categories": categories, "products": products},
-    )
+
+def categories_view(request):
+    return render(request, "pages/categories.html")

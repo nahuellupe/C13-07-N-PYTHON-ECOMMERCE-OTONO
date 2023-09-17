@@ -1,0 +1,31 @@
+* {
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    outline: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    list-style: none;
+    background-color: #ffffff;
+}
+
+.index-navigation-container {
+    margin-top: 15px;
+}
+
+.index-cover-image-container {
+    margin-top: 15px;
+}
+
+.index-article-container {
+    margin-top: 15px;
+}
+
+.index-footer-container {
+    margin-top: 15px;
+}
+
+* :hover {
+    border: 1px solid;
+}

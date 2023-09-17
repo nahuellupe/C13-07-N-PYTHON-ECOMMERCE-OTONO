@@ -2,17 +2,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 0 10px 0;
+    margin: 0;
 
     & .logo {
-        font-size: 25px;
-        font-weight: 900;
-        font-style: italic;
+
+        & a {
+            font-family: Arial black;
+            font-size: 16px;
+            font-style: italic;
+            letter-spacing: 1px;
+        }
     }
 
     & .seeker {
         border: 0;
-        background-color: antiquewhite;
+        background-color: #ececec;
         padding: 5px 0 5px 0;
         margin: 0 20px 0 40px;
         min-width: 300px;
@@ -20,14 +24,12 @@
 
     & .list {
         display: flex;
-        list-style: none;
 
         & .list-item {
-            font-size: 18px;
             padding: 0 20px 0 20px;
 
             & a {
-                text-decoration: none;
+                font-size: 16px;
             }
         }
     }
