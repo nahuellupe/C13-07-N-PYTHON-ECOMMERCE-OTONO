@@ -7,16 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>otoño ecommerce website</title>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
 </head>
 
 <body class="home-contenedor">
     <header class="home-contenedor-encabezado">
         {% include "components/navigation-bar.html" %}
+        {% include "components/cover-image.html" %}
     </header>
-    {% include "components/cover-image.html" %}
     <main class="home-contenedor-cuerpo">
-        
         <h2 class="home-contenedor-cuerpo-titulo">PRODUCTOS MAS DESTACADOS</h2>
         <ul class="home-contenedor-cuerpo-productos">
             {% for product in products|slice:":5" %}
