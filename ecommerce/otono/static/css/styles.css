@@ -1,0 +1,96 @@
+* {
+    font-family: Montserrat, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.home-contenedor {
+    display: flex;
+    flex-direction: column;
+
+    & .home-contenedor-encabezado {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0 10px 0;
+
+        & .home-contenedor-encabezado-titulo {
+            font-size: 25px;
+            font-weight: 900;
+            font-style: italic;
+        }
+
+        & .home-contenedor-encabezado-buscador {
+            border: 0;
+            background-color: antiquewhite;
+            padding: 5px 0 5px 0;
+            margin: 0 20px 0 40px;
+            min-width: 300px;
+        }
+
+        & .home-contenedor-encabezado-lista {
+            display: flex;
+            list-style: none;
+
+            & .home-contenedor-encabezado-lista-item {
+                font-size: 18px;
+                padding: 0 20px 0 20px;
+
+                & a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    & .home-contenedor-cuerpo {
+        & .home-contenedor-cuerpo-imagen {
+            width: 100%;
+            height: 20vw;
+            object-fit: cover;
+
+            & img {
+                width: 100%;
+                height: 100%;
+            }
+
+        }
+
+        & .home-contenedor-cuerpo-titulo {
+            font-size: 25px;
+            margin: 80px 0 0 80px;
+        }
+
+        & .home-contenedor-cuerpo-productos {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+
+            & .home-contenedor-cuerpo-productos-tarjeta {
+                margin: 10px;
+
+                & .home-contenedor-cuerpo-productos-imagen {
+                    width: 100%;
+                    height: 20vw;
+                    object-fit: cover;
+
+                    & img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 5px;
+                    }
+                }
+
+                & .home-contenedor-cuerpo-productos-nombre {
+                    font-size: 15px;
+                }
+
+            }
+        }
+
+    }
+}
+
+* :hover {
+    border: 1px solid;
+}

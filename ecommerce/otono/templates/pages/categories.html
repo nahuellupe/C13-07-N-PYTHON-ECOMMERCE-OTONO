@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Categorías</title>
+</head>
+
+<body>
+    <h1>Categorías</h1>
+
+    <form method="get">
+        <label for="category">Seleccione una categoría:</label>
+        <select name="category" id="category">
+            <option value="">Todas</option>
+            {% for category in categories %}
+            <option value="{{ category.category }}">{{ category.category }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Filtrar</button>
+    </form>
+
+    <h2>Productos:</h2>
+    <ul>
+        {% for product in products %}
+        <li>{{ product.name }} - {{ product.price }} USD</li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>

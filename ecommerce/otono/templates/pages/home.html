@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>otoño ecommerce website</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+
+<body class="home-contenedor">
+    <header class="home-contenedor-encabezado">
+        <h2 class="home-contenedor-encabezado-titulo"><a href="/">OTOÑO</a></h2>
+        <input class="home-contenedor-encabezado-buscador" />
+        <ul class="home-contenedor-encabezado-lista">
+            <li class="home-contenedor-encabezado-lista-item"><a href="{% url 'categories' %}">Categorías</a></li>
+            <li class="home-contenedor-encabezado-lista-item"><a href="{% url 'categories' %}">Usuario</a></li>
+        </ul>
+    </header>
+    <main class="home-contenedor-cuerpo">
+        <div class="home-contenedor-cuerpo-imagen">
+            <img src="https://png.pngtree.com/png-vector/20220521/ourlarge/pngtree-design-a-beautiful-summer-sale-banner-cover-with-special-discounts-and-cute-theme-vector-png-image_36764868.jpg"
+                alt="imagen-portada" />
+        </div>
+        <h2 class="home-contenedor-cuerpo-titulo">PRODUCTOS MAS DESTACADOS</h2>
+        <ul class="home-contenedor-cuerpo-productos">
+            {% for product in products|slice:":5" %}
+            <li class="home-contenedor-cuerpo-productos-tarjeta">
+                <div class="home-contenedor-cuerpo-productos-imagen">
+                    <img src="{{ product.image_url }}" />
+                </div>
+                <h3 class="home-contenedor-cuerpo-productos-nombre">{{ product.name }}</h3>
+                <h4 class="home-contenedor-cuerpo-productos-precio">{{ product.price }}</h4>
+            </li>
+            {% endfor %}
+        </ul>
+    </main>
+
+    <footer class="home-contenedor-piedepagina">
+
+    </footer>
+</body>
+
+</html>
