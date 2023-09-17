@@ -20,18 +20,8 @@
     </section>
 
     <article class="index-article-container">
-        {% if show_home %}
-        {% include "pages/home.html" %}
-        {% endif %}
-        {% if show_orders %}
-        {% include "pages/orders.html" %}
-        {% endif %}
-        {% if show_login %}
-        {% include "pages/login.html" %}
-        {% endif %}
+        {% block content %}{% endblock %}
     </article>
-
-
 
     <footer class="index-footer-container">
         {% include "components/footer.html" %}

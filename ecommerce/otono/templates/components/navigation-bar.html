@@ -4,10 +4,10 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/navigation-bar.css' %}">
 </head>
 <section class="navigation-bar-container">
-    <h2 class="logo"><a href="/">OTOÑO</a></h2>
+    <h2 class="logo"><a href="{% url 'home' %}">OTOÑO</a></h2>
     <input class="seeker" />
     <ul class="list">
-        <li class="list-item"><a href="/">Home</a></li>
+        <li class="list-item"><a href="{% url 'home' %}">Home</a></li>
         <li class="list-item"><a href="{% url 'orders' %}">Mis pedidos</a></li>
         <li class="list-item"><a href="{% url 'login' %}">Registrate</a></li>
     </ul>

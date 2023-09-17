@@ -1,25 +1,21 @@
-from django.shortcuts import render, redirect
-from .models import Product
-from django.contrib.auth.views import LoginView
-from django.contrib.auth.decorators import login_required
+from django.views.generic import TemplateView
 
 
-def index_view(request):
-    return render(request, "index.html")
+class IndexView(TemplateView):
+    template_name = "index.html"
 
 
-def home_view(request):
-    products = Product.objects.all()
-    return render(request, "pages/home.html")
+class HomeView(TemplateView):
+    template_name = "pages/home.html"
 
 
-def orders_view(request):
-    return render(request, "pages/orders.html")
+class CategoriesView(TemplateView):
+    template_name = "pages/categories.html"
 
 
-def login_view(request):
-    return render(request, "pages/login.html")
+class OrdersView(TemplateView):
+    template_name = "pages/orders.html"
 
 
-def categories_view(request):
-    return render(request, "pages/categories.html")
+class LoginView(TemplateView):
+    template_name = "pages/login.html"
