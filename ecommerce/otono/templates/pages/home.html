@@ -12,14 +12,11 @@
 
 <body class="home-contenedor">
     <header class="home-contenedor-encabezado">
-        {% include "components/navigation_bar.html" %}
+        {% include "components/navigation-bar.html" %}
     </header>
-
+    {% include "components/cover-image.html" %}
     <main class="home-contenedor-cuerpo">
-        <div class="home-contenedor-cuerpo-imagen">
-            <img src="https://png.pngtree.com/png-vector/20220521/ourlarge/pngtree-design-a-beautiful-summer-sale-banner-cover-with-special-discounts-and-cute-theme-vector-png-image_36764868.jpg"
-                alt="imagen-portada" />
-        </div>
+        
         <h2 class="home-contenedor-cuerpo-titulo">PRODUCTOS MAS DESTACADOS</h2>
         <ul class="home-contenedor-cuerpo-productos">
             {% for product in products|slice:":5" %}
